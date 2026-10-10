@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d3970">
+<meta name="description" content="Contabile Smart: la contabilità senza complicazioni. Scopri un modo più semplice e chiaro di gestire la contabilità.">
+<title>Contabile Smart — La contabilità senza complicazioni</title>
+<style>
+:root{--navy:#103a70;--blue:#2397ed;--pale:#edf6ff;--ink:#182b45;--muted:#61718a;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{height:82px;display:flex;align-items:center;border-bottom:1px solid #e9eff6;background:rgba(255,255,255,.94)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.28rem;letter-spacing:-.04em;color:var(--navy)}
+.brand span span{color:var(--blue)}
+.logo{width:42px;height:42px;flex:none}
+.links{display:flex;align-items:center;gap:28px;font-size:.94rem;color:#41536c}
+.links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:12px;background:var(--blue);color:white;font-weight:750;border:0;box-shadow:0 8px 20px #2397ed2c;transition:transform .2s,background .2s;cursor:pointer}
+.btn:hover{background:#147ed0;transform:translateY(-2px)}
+.btn.secondary{background:white;color:var(--navy);border:1px solid #d8e5f3;box-shadow:none}
+.hero{position:relative;overflow:hidden;padding:86px 0 90px;background:radial-gradient(ellipse at 95% 10%,#dceeff 0,transparent 35%),linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+.hero:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid #cfe6ff;right:-150px;bottom:-200px;box-shadow:0 0 0 28px #edf6ff,0 0 0 58px #f5faff}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #d7eaff;background:#fff;border-radius:999px;color:var(--navy);font-weight:700;font-size:.83rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#27b47e}
+h1{font-size:clamp(2.7rem,5vw,4.65rem);line-height:1.04;letter-spacing:-.055em;color:var(--navy);margin:22px 0}
+h1 em{font-style:normal;color:var(--blue)}
+.lead{font-size:1.14rem;max-width:570px;color:var(--muted);margin:0 0 28px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.note{font-size:.85rem;color:#77869a;margin-top:17px}
+.preview{background:white;border:1px solid #e0ebf7;border-radius:24px;padding:24px;box-shadow:0 25px 70px #173f6f15;transform:rotate(1deg)}
+.preview-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.preview-title{font-weight:800;color:var(--navy)}
+.pill{font-size:.76rem;font-weight:700;color:#16865e;background:#e9faf3;border-radius:999px;padding:5px 9px}
+.metric{padding:19px;border-radius:17px;background:linear-gradient(135deg,#f1f8ff,#fff);border:1px solid #e7f1fc}
+.metric small{display:block;color:#6d7c90;font-weight:600}
+.metric strong{display:block;font-size:1.75rem;color:var(--navy);margin-top:4px}
+.chart{height:100px;display:flex;align-items:end;gap:10px;padding:18px 5px 0;border-bottom:1px solid #e9eff6}
+.bar{flex:1;border-radius:7px 7px 0 0;background:linear-gradient(180deg,#43b1ff,#1b78d1);opacity:.9}
+.mini-row{display:flex;align-items:center;gap:12px;padding:13px 4px;border-bottom:1px solid #eef2f7;font-size:.9rem}
+.mini-icon{display:grid;place-items:center;width:34px;height:34px;background:#edf6ff;border-radius:10px;color:var(--blue);font-weight:900}
+.mini-row span:last-child{margin-left:auto;color:#19865f;font-weight:750}
+section{padding:78px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 38px}
+h2{font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-.04em;color:var(--navy);margin:0 0 14px}
+.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;border:1px solid #e5edf6;border-radius:18px;background:white}
+.card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--pale);color:var(--blue);font-size:1.35rem;font-weight:900;margin-bottom:18px}
+.card h3{color:var(--navy);margin:0 0 8px;font-size:1.12rem}
+.card p{margin:0;color:var(--muted);font-size:.96rem}
+.band{background:var(--navy);color:white;border-radius:26px;padding:43px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.band h2{color:white;margin-bottom:8px}
+.band p{margin:0;color:#d4e4f7}
+.band .btn{background:white;color:var(--navy);box-shadow:none;white-space:nowrap}
+.contact{background:#f7fbff}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+.contact-copy p{color:var(--muted)}
+form{padding:27px;background:white;border:1px solid #e2ecf7;border-radius:20px;box-shadow:0 12px 35px #173f6f0a}
+label{display:block;font-size:.9rem;font-weight:700;color:var(--navy);margin:0 0 6px}
+input,textarea{width:100%;font:inherit;border:1px solid #d9e4f0;border-radius:10px;padding:12px 13px;margin-bottom:15px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{outline:3px solid #2397ed25;border-color:var(--blue)}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.8rem;color:#7b899b;margin:10px 0 0}
+#form-status{font-size:.9rem;color:#14764e;margin-top:12px}
+footer{padding:27px 0;border-top:1px solid #e8eef6;color:#78869a;font-size:.88rem}
+.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:800px){.links a:not(.btn){display:none}.hero{padding:62px 0}.hero-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.preview{max-width:520px;width:100%;margin:auto}.cards{grid-template-columns:1fr}.band{align-items:flex-start;flex-direction:column;padding:30px}.hero-grid{gap:42px}section{padding:58px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inizio" aria-label="Contabile Smart, pagina iniziale">
+      <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Logo Contabile Smart">
+        <path d="M47 12A25 25 0 1 0 47 52" fill="none" stroke="#1559a6" stroke-width="9" stroke-linecap="square"/>
+        <rect x="19" y="32" width="6" height="15" rx="1" fill="#2397ed"/><rect x="29" y="25" width="6" height="22" rx="1" fill="#2397ed"/><rect x="39" y="17" width="6" height="30" rx="1" fill="#2397ed"/>
+        <path d="M16 49 Q34 57 51 23" fill="none" stroke="#2397ed" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span>Contabile <span>Smart</span></span>
+    </a>
+    <nav class="links" aria-label="Navigazione principale">
+      <a href="#vantaggi">Vantaggi</a><a href="#come-funziona">Come funziona</a><a class="btn" href="#contatti">Contattaci</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inizio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Più chiarezza, meno complicazioni</div>
+        <h1>La contabilità<br><em>senza complicazioni.</em></h1>
+        <p class="lead">Con Contabile Smart, gestire la contabilità può diventare più semplice. Un approccio chiaro e pratico per aiutarti a concentrarti su ciò che conta davvero: la tua attività.</p>
+        <div class="actions"><a class="btn" href="#contatti">Scopri di più&nbsp; →</a><a class="btn secondary" href="#vantaggi">I nostri vantaggi</a></div>
+        <p class="note">Semplicità, organizzazione e supporto: tutto in un unico punto.</p>
+      </div>
+      <div class="preview" aria-label="Illustrazione dimostrativa di un pannello contabile">
+        <div class="preview-top"><div class="preview-title">Il tuo quadro contabile</div><span class="pill">● Organizzato</span></div>
+        <div class="metric"><small>La chiarezza, prima di tutto</small><strong>Numeri sotto controllo</strong><small>Informazioni ordinate e facili da consultare</small></div>
+        <div class="chart" aria-hidden="true"><div class="bar" style="height:34%"></div><div class="bar" style="height:51%"></div><div class="bar" style="height:43%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:91%"></div><div class="bar" style="height:78%"></div></div>
+        <div class="mini-row"><span class="mini-icon">✓</span><span>Documenti in ordine</span><span>Pratico</span></div>
+        <div class="mini-row"><span class="mini-icon">↗</span><span>Una visione più chiara</span><span>Smart</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="vantaggi">
+    <div class="wrap">
+      <div class="section-head"><h2>La semplicità fa la differenza</h2><p>Meno confusione nella gestione quotidiana, più tempo ed energie da dedicare al tuo lavoro.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">✓</div><h3>Tutto più chiaro</h3><p>Informazioni presentate in modo semplice, per aiutarti a orientarti tra numeri e scadenze.</p></article>
+        <article class="card"><div class="card-icon">↗</div><h3>Più organizzazione</h3><p>Un metodo ordinato per tenere sotto controllo documenti e attività amministrative.</p></article>
+        <article class="card"><div class="card-icon">♡</div><h3>Un approccio umano</h3><p>La tecnologia è utile quando rende le cose più facili e le persone si sentono accompagnate.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="come-funziona" style="padding-top:0">
+    <div class="wrap"><div class="band"><div><h2>La tua contabilità, con più serenità.</h2><p>Parliamone: raccontaci di cosa hai bisogno e troviamo il modo giusto per semplificare.</p></div><a class="btn" href="#contatti">Parliamone insieme&nbsp; →</a></div></div>
+  </section>
+  <section class="contact" id="contatti">
+    <div class="wrap contact-grid">
+      <div class="contact-copy"><h2>Facciamo due chiacchiere?</h2><p>Compila il modulo per preparare una richiesta di informazioni. Puoi poi inviarla dal tuo programma di posta.</p><p><strong>Contabile Smart</strong><br>La contabilità senza complicazioni.</p></div>
+      <form id="contact-form">
+        <label for="name">Nome</label><input id="name" name="name" autocomplete="name" placeholder="Come ti chiami?" required>
+        <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@esempio.it" required>
+        <label for="message">Come possiamo aiutarti?</label><textarea id="message" name="message" placeholder="Scrivi qui la tua richiesta..." required></textarea>
+        <button class="btn" type="submit">Prepara l'email&nbsp; →</button>
+        <p class="form-note">Il modulo apre il tuo programma di posta: non invia né archivia dati su questo sito.</p>
+        <p id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Contabile Smart</span><span>La contabilità senza complicazioni.</span></div></footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const subject = encodeURIComponent('Richiesta informazioni — Contabile Smart');
+  const body = encodeURIComponent('Nome: '+name+'\\nEmail: '+email+'\\n\\nRichiesta:\\n'+message);
+  document.getElementById('form-status').textContent = 'Si sta aprendo il programma di posta. Per ricevere le richieste, configura prima l’indirizzo email del destinatario nel codice della pagina.';
+  window.location.href = 'mailto:?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
