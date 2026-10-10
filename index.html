@@ -126,11 +126,12 @@ footer{padding:27px 0;border-top:1px solid #e8eef6;color:#78869a;font-size:.88re
     <div class="wrap contact-grid">
       <div class="contact-copy"><h2>Facciamo due chiacchiere?</h2><p>Compila il modulo per preparare una richiesta di informazioni. Puoi poi inviarla dal tuo programma di posta.</p><p><strong>Contabile Smart</strong><br>La contabilità senza complicazioni.</p></div>
 <form id="contact-form">
+  <form action="mailto:contabilesmart2021@gmail.com" method="post" enctype="text/plain">
         <label for="name">Nome</label><input id="name" name="name" autocomplete="name" placeholder="Come ti chiami?" required>
         <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@esempio.it" required>
         <label for="message">Come possiamo aiutarti?</label><textarea id="message" name="message" placeholder="Scrivi qui la tua richiesta..." required></textarea>
         <button class="btn" type="submit">Prepara l'email&nbsp; →</button>
-        <p class="form-note">Il modulo apre il tuo programma di posta: non invia né archivia dati su questo sito.</p>
+       ' <p class="form-note">Il modulo apre il tuo programma di posta</p>
         <p id="form-status" role="status"></p>
       </form>
     
